@@ -1,4 +1,5 @@
 import App from '@/App';
+import '@/index.css';
 import 'normalize.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
