@@ -5,6 +5,17 @@
   height: fit-content;
 }
 
+.item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  padding: 4px 0;
+}
+
+.item:not(:first-child) {
+  border-top: 1px solid #eee;
+}
+
 .icon {
   border: solid currentcolor;
   border-width: 0 2px 2px 0;

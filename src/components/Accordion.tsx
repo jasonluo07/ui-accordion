@@ -23,7 +23,7 @@ const Accordion = ({ sections }: AccordionProps) => {
         };
 
         return (
-          <div key={value}>
+          <div className={styles.item} key={value}>
             <div onClick={handleToggle}>
               {title} <span className={clsx(styles.icon, { [styles.iconRotated]: isOpen })} />
             </div>
