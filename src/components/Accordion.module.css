@@ -2,6 +2,7 @@
   background-color: white;
   outline: 1px solid #e6e6e6;
   width: 375px;
+  height: fit-content;
 }
 
 .icon {
