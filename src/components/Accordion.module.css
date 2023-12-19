@@ -31,6 +31,12 @@
   background-color: #eee;
 }
 
+.itemContent {
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 4px;
+}
+
 .icon {
   border: solid currentcolor;
   border-width: 0 2px 2px 0;
