@@ -12,17 +12,17 @@ const Accordion = ({ sections }: AccordionProps) => {
 
   return (
     <div className={styles.accordion}>
-      {sections.map(({ title, content }) => {
-        const isOpen = openSections.has(title);
+      {sections.map(({ title, value, content }) => {
+        const isOpen = openSections.has(value);
 
         const handleToggle = () => {
           const newOpenSections = new Set(openSections);
-          isOpen ? newOpenSections.delete(title) : newOpenSections.add(title);
+          isOpen ? newOpenSections.delete(value) : newOpenSections.add(value);
           setOpenSections(newOpenSections);
         };
 
         return (
-          <div key={title}>
+          <div key={value}>
             <div onClick={handleToggle}>
               {title} <span className={styles.icon} />
             </div>
