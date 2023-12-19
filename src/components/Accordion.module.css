@@ -16,6 +16,21 @@
   border-top: 1px solid #eee;
 }
 
+.itemTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 4px;
+}
+
+.itemTitle:hover {
+  background-color: #eee;
+}
+
 .icon {
   border: solid currentcolor;
   border-width: 0 2px 2px 0;
