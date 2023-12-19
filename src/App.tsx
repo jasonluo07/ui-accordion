@@ -1,8 +1,7 @@
 import Accordion from '@/components/Accordion';
+import { SECTIONS } from '@/constants';
 
 import styles from './App.module.css';
-
-import { SECTIONS } from '@/constants';
 
 const App = () => {
   return (
