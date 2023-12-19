@@ -25,7 +25,7 @@ const Accordion = ({ sections }: AccordionProps) => {
         return (
           <div className={styles.item} key={value}>
             <button className={styles.itemTitle} onClick={handleToggle}>
-              {title} <span className={clsx(styles.icon, { [styles.iconRotated]: isOpen })} />
+              {title} <span className={clsx(styles.icon, isOpen && styles.iconRotated)} />
             </button>
             <div className={styles.itemContent} hidden={!isOpen}>
               {content}
