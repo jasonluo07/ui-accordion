@@ -14,3 +14,7 @@
   transform: translateY(-2px) rotate(45deg);
   width: 8px;
 }
+
+.iconRotated {
+  transform: translateY(2px) rotate(-135deg);
+}

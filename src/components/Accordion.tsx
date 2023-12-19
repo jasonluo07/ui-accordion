@@ -1,4 +1,5 @@
 import type { ISection } from '@/types';
+import { clsx } from 'clsx';
 import { useState } from 'react';
 
 import styles from './Accordion.module.css';
@@ -24,7 +25,7 @@ const Accordion = ({ sections }: AccordionProps) => {
         return (
           <div key={value}>
             <div onClick={handleToggle}>
-              {title} <span className={styles.icon} />
+              {title} <span className={clsx(styles.icon, { [styles.iconRotated]: isOpen })} />
             </div>
             <div hidden={!isOpen}>{content}</div>
           </div>
