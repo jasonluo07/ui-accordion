@@ -1,35 +1,24 @@
+import type { ISection } from '@/types';
+
 import styles from './Accordion.module.css';
 
-const Accordion = () => {
+type AccordionProps = {
+  sections: ISection[];
+};
+
+const Accordion = ({ sections }: AccordionProps) => {
   return (
     <div className={styles.accordion}>
-      <div>
-        <div>
-          HTML <span aria-hidden={true} className={styles.icon} />
-        </div>
-        <div>
-          The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed
-          in a web browser.
-        </div>
-      </div>
-      <div>
-        <div>
-          CSS <span aria-hidden={true} className={styles.icon} />
-        </div>
-        <div>
-          Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in
-          a markup language such as HTML or XML.
-        </div>
-      </div>
-      <div>
-        <div>
-          JavaScript <span aria-hidden={true} className={styles.icon} />
-        </div>
-        <div>
-          JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the
-          World Wide Web, alongside HTML and CSS.
-        </div>
-      </div>
+      {sections.map(({ title, content }) => {
+        return (
+          <div key={title}>
+            <div>
+              {title} <span className={styles.icon} />
+            </div>
+            <div>{content}</div>
+          </div>
+        );
+      })}
     </div>
   );
 };
