@@ -1,30 +1,7 @@
-# React + TypeScript + Vite
+# UI Accordion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Accordion 組件，是用來顯示一系列垂直堆疊的內容，每個區塊都有一個標題和內容，點擊標題可以展開或收合內容。
 
-Currently, two official plugins are available:
+## 如何實作？
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-};
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- 使用 Set 資料結構來儲存已經被展開的區塊，因為 Set 的特性是不會有重複的值，且不考慮順序，以及查詢、增加、刪除的時間複雜度都是 `O(1)`。
